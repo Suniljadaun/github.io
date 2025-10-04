@@ -1,0 +1,186 @@
+/* --- 1. Foundational & Color Palette Setup --- */
+:root {
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --card-bg-color: #ffffff;
+    --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+    --border-color: #e9ecef;
+    --primary-color: #007bff;
+    --primary-hover-color: #0056b3;
+    --sidebar-bg: #ffffff;
+    --sidebar-link-color: #6c757d;
+    --sidebar-link-hover-bg: #f1f3f5;
+    --sidebar-link-hover-text: #007bff;
+    --sidebar-border: #dee2e6;
+    --table-header-bg: #343a40;
+    --table-stripe-bg: #f8f9fa;
+    --table-hover-bg: #e9ecef;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --card-bg-color: #1e1e1e;
+    --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    --border-color: #333333;
+    --primary-color: #0d6efd;
+    --primary-hover-color: #3d8bfd;
+    --sidebar-bg: #1e1e1e;
+    --sidebar-link-color: #adb5bd;
+    --sidebar-link-hover-bg: #343a40;
+    --sidebar-link-hover-text: #ffffff;
+    --sidebar-border: #333333;
+    --table-header-bg: #212529;
+    --table-stripe-bg: #2c3034;
+    --table-hover-bg: #343a40;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* --- 2. Main Layout & Sidebar --- */
+#main-content {
+    margin-left: 260px;
+    padding: 2em 3em;
+    box-sizing: border-box;
+}
+
+#sidebar {
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--sidebar-border);
+    height: 100%; width: 240px; position: fixed; z-index: 1000; top: 0; left: 0;
+    transition: background-color 0.3s, border-color 0.3s;
+    overflow-y: auto;
+}
+#sidebar h3 { color: var(--text-color); text-align: center; font-size: 1.5em; margin: 20px 0 30px 0; }
+#sidebar ul { list-style-type: none; padding: 0; margin: 0; }
+#sidebar li a {
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 1.05em;
+    font-weight: 500;
+    color: var(--sidebar-link-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s ease-in-out;
+}
+#sidebar li a:hover {
+    background-color: var(--sidebar-link-hover-bg);
+    color: var(--sidebar-link-hover-text);
+    transform: translateX(5px);
+}
+
+/* --- 3. Card & Content Styling --- */
+.main-title { font-size: 2.5em; color: var(--primary-color); }
+.sub-title { font-size: 1.2em; color: var(--text-color); opacity: 0.7; }
+
+.card {
+    background-color: var(--card-bg-color);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+.card h2 { margin-top: 0; color: var(--primary-color); padding-bottom: 10px; border-bottom: 2px solid var(--border-color); }
+
+/* --- 4. Interactive Elements (Accordion, Toggler, Buttons) --- */
+.accordion-item { border-bottom: 1px solid var(--border-color); }
+.accordion-item:last-child { border-bottom: none; }
+.accordion-header {
+    background: none; border: none; width: 100%; text-align: left;
+    padding: 20px 0; font-size: 1.1em; font-weight: 500; color: var(--text-color);
+    cursor: pointer; position: relative; transition: background-color 0.2s;
+}
+.accordion-header:hover { background-color: rgba(0,0,0,0.02); }
+.accordion-header::after { content: '+'; position: absolute; right: 10px; font-size: 1.5em; color: var(--primary-color); transition: transform 0.3s; }
+.accordion-header.active::after { transform: rotate(45deg); }
+.accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out; }
+.accordion-content p, .accordion-content table { padding: 0 10px 20px; margin: 0; opacity: 0.9; }
+
+/* Theme Toggle Switch */
+.theme-toggle-container { padding: 20px; margin-top: 20px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-around; align-items: center; font-weight: 500; color: var(--sidebar-link-color); }
+.switch { position: relative; display: inline-block; width: 50px; height: 28px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 28px; }
+.slider:before { position: absolute; content: ""; height: 20px; width: 20px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%; }
+input:checked + .slider { background-color: var(--primary-color); }
+input:checked + .slider:before { transform: translateX(22px); }
+
+/* Go to Top Button */
+#goToTopBtn {
+    display: none; position: fixed; bottom: 25px; right: 25px; z-index: 999;
+    border: none; outline: none; background-color: var(--primary-color); color: white;
+    cursor: pointer; padding: 15px; border-radius: 50%; font-size: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); transition: background-color 0.3s, transform 0.3s;
+}
+#goToTopBtn:hover { background-color: var(--primary-hover-color); transform: translateY(-3px); }
+
+/* --- 5. Modern Table Styling --- */
+.table-container { overflow-x: auto; } /* Makes tables scroll horizontally on small screens */
+table {
+    width: 100%; border-collapse: collapse; margin-top: 20px;
+    font-size: 15px;
+}
+th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid var(--border-color); word-wrap: break-word; }
+thead th { background-color: var(--table-header-bg); color: #fff; font-weight: 500; }
+tbody tr { transition: background-color 0.2s; }
+#schedule-table tbody tr:nth-child(even),
+#lab-table tbody tr:nth-child(even),
+#exams-table tbody tr:nth-child(even) { background-color: var(--table-stripe-bg); }
+#schedule-table tbody tr:hover,
+#lab-table tbody tr:hover,
+#exams-table tbody tr:hover { background-color: var(--table-hover-bg); }
+#grading-table th, #rubric-table th { background-color: var(--primary-color); }
+
+/* --- 6. Footer --- */
+#page-footer {
+    background-color: var(--card-bg-color); color: var(--text-color);
+    padding: 50px 0 0 0; margin-top: 40px;
+    border-top: 4px solid var(--primary-color);
+    font-size: 15px; line-height: 1.6;
+}
+.footer-container { width: 90%; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; padding-bottom: 30px; }
+.footer-column { width: 31%; min-width: 260px; padding: 0 15px; box-sizing: border-box; margin-bottom: 20px; }
+.footer-column h4 { color: var(--text-color); font-size: 18px; margin-top: 0; margin-bottom: 20px; position: relative; padding-bottom: 10px; }
+.footer-column h4::after { content: ''; position: absolute; left: 0; bottom: 0; width: 40px; height: 2px; background-color: var(--primary-color); }
+.footer-column ul { list-style-type: none; padding: 0; }
+.footer-column ul li { margin-bottom: 10px; }
+#page-footer a { color: var(--primary-color); text-decoration: none; transition: color 0.3s; }
+#page-footer a:hover { text-decoration: underline; color: var(--primary-hover-color); }
+#modern-clock {
+    font-size: 1.8em; padding: 10px; letter-spacing: 2px;
+    background-color: var(--bg-color); border-radius: 8px; text-align: center;
+    font-weight: 500;
+}
+.footer-bottom {
+    background-color: var(--bg-color); text-align: center;
+    padding: 15px 0; margin-top: 30px;
+    color: var(--sidebar-link-color); font-size: 14px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* --- 7. Animation --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
