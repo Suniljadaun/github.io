@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CS6.302 SSD Monsoon 2025</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="startModernClock()">
+
+    <a href="#home" id="goToTopBtn" title="Go to top">⬆️</a>
+
+    <nav id="sidebar">
+        <h3>CS6.302 SSD</h3>
+        <ul>
+            <li><a href="#home">🏠 Home</a></li>
+            <li><a href="#about">ℹ️ About</a></li>
+            <li><a href="#lecture">🕒 Lecture Hours</a></li>
+            <li><a href="#cpolicy">⚖️ Course Policy</a></li>
+            <li><a href="#schedule">🗓️ Schedule</a></li>
+            <li><a href="#lab">🧪 Lab</a></li>
+            <li><a href="#activity">✍️ Exams</a></li>
+            <li><a href="#staff">🧑‍🏫 Staff</a></li>
+            <li class="theme-toggle-container">
+                <span>Dark Mode</span>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider round"></span>
+                </label>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="main-content">
+
+        <section id="home" class="fade-in">
+            <h1 class="main-title">CS6.302 - Software System Development</h1>
+            <p class="sub-title">Software Engineering Research Center, IIIT Hyderabad | Monsoon 2025</p>
+        </section>
+
+        <section id="about" class="card fade-in">
+            <h2>ℹ️ About This Course</h2>
+            <p>Software System Development is a graduate-level course that equips students with a comprehensive understanding of the principles, tools, and practices involved in designing and building modern software systems. Emphasizing a systems-oriented perspective, the course explores foundational and contemporary topics including Operating Systems, Computer Networks, Software Engineering methodologies, and Database Systems (both relational and NoSQL).</p>
+            <p>Students will gain practical experience with industry-relevant tools and technologies such as Bash scripting, SQL, NoSQL databases, HTML, CSS, JavaScript, front-end frameworks, RESTful APIs, Python, and Flask. The course focuses on building scalable, maintainable, and secure software systems while fostering an appreciation for system integration, version control, development workflows, and deployment strategies.</p>
+            <p>Designed for students with a fundamental background in programming, this course bridges theory and practice, preparing them to contribute effectively to complex software development projects in both research and industry settings.</p>
+        </section>
+
+        <section id="lecture" class="card fade-in">
+            <h2>🕒 Lecture, Lab & Office Hours</h2>
+            <ul>
+                <li><b>Lecture 🏛️:</b> 8:30 AM to 9:55 AM - Tuesdays and Fridays - Lecture Hall: H-205 - 29 Classes</li>
+                <li><b>Lab/Tutorial 💻:</b> 2:00 PM to 5:00 PM - Friday - Lecture Hall: SH1 - 14 Sessions</li>
+            </ul>
+            <p><b>Office Hours:</b> There are no specific instructor office hours. The instructor is available to meet all students for 15 minutes before every class to address any queries or concerns. You can also directly write to the instructor to get your queries addressed. TA office hours can be found in the <a href="#staff">Staff section</a>.</p>
+        </section>
+
+        <section id="cpolicy" class="card fade-in">
+            <h2>⚖️ Course Policy</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Teaching and Learning Methodology</button>
+                    <div class="accordion-content">
+                        <p>This course is designed in such a manner to help learners get the essence of principles behind good software system development. Learners will be taught concepts by making them work on real-life problems. This will promote deeper engagement, deeper understanding and resembles the true career situation. Overall Course Notes can be found <a href="https://tinted-rumba-8c6.notion.site/CS6-302-Software-System-Development-670da706e9514d7f9d5b1bcf3c6a1005" target="_blank">here</a>.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Academic Honesty</button>
+                    <div class="accordion-content">
+                        <p>If A helps B in a Task X -> B doesn't get opportunity to do task X, B doesn't learn the skill to do task X, B gets spoilt-dependent-unfit for jobs requiring skills of task X, You may think it is okay to do it only once and not repeat it, But when a task is done once it gets wired into the brain as being "okay" and unless there is a strong reason it will repeat. If you want to help, help to learn!</p>
+                    </div>
+                </div>
+                 <div class="accordion-item">
+                    <button class="accordion-header">Zero Tolerance on Plagiarism</button>
+                    <div class="accordion-content">
+                        <p>This course requires student to submit assignments, participate in in-class activities, give mid and final exams, work with groups on projects and so on. Any forms of cheating or plagiarism will result in a score of “0” for projects, assignments or exams. Egregious cases will result in a grade of “F” for the course.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Absentee Policy</button>
+                    <div class="accordion-content">
+                        <p>You are expected to attend and participate in all lectures and lab sessions (graded or ungraded). However, if any quiz/activity is held during the lecture session that you are absent, you will be given a ‘0’ for the same. There will be NO make up classes/quizzes/activities. These rules are not meant to be demeaning or penalizing. They are stated to establish a clear understanding of the course expectations for student participation and demeanor in the classroom. These rules are meant to help/motivate students to learn.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Use of AI Tools</button>
+                    <div class="accordion-content">
+                        <p>Students are free to use different AI tools like ChatGPT, Co-pilot, etc. for the course assignments/activities. However, please do mention what tools and how they have been used in the submission report. Please note that these tools can mislead or provide wrong solutions. It's important to know the concept before using the tools. Tools are at the end-of-the-day enablers. Today it will be ChatGPT tomorrow it will be something else but the concepts needs to be clear to leverage the different tools. Bottomline, feel free to use different tools but use them wisely!</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Grading Distribution</button>
+                    <div class="accordion-content">
+                        <p>The course instructor reserves the right to make minor modifications to the above distribution based on the progress of the courses. Below is the overall grade distribution.</p>
+                        <table id="grading-table">
+                            <thead>
+                                <tr><th>Deliverables</th><th>Weightage</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Assignment (4)</td><td>15%</td></tr>
+                                <tr><td>Lab Activities (14)</td><td>15%</td></tr>
+                                <tr><td>Practice and Class Activity (5)</td><td>10%</td></tr>
+                                <tr><td>QUIZ (2)</td><td>10%</td></tr>
+                                <tr><td>MID (1) - Team Hackathon</td><td>10%</td></tr>
+                                <tr><td>Final Exam (Team Project)</td><td>40%</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Evaluation Rubric</button>
+                    <div class="accordion-content">
+                         <table id="rubric-table">
+                            <thead>
+                                <tr><th>Rubric</th><th>Input(15%)</th><th>Logic(60%)</th><th>Output(15%)</th><th>Submission(10%)</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Exceptional (100%)</td><td>All inputs are working as per the requirements</td><td>Logic is accurate and as per the requirements defined in the question</td><td>All outputs are returned as per the requirements</td><td>Script submissions are correct and as per requirements</td></tr>
+                                <tr><td>Acceptable (70%)</td><td>Inputs are partially working as per the requirements</td><td>Logic is almost correct and as per the requirements defined in the question</td><td>Outputs are partially returned as per the requirements</td><td>Script submissions is partially correct and as per requirements</td></tr>
+                                <tr><td>Beginning (30%)</td><td>At least one input is working as per the requirements</td><td>Logic is partially correct and as per the requirements defined in the question</td><td>At least one output is returned as per the requirement</td><td>Atleast one part of the script submission is correct and as per requirements</td></tr>
+                                <tr><td>No Response (0%)</td><td>None of the inputs are working as per the requirements</td><td>Logic is incorrect and not as per the requirements defined in the question</td><td>None of the outputs are returned as per the requirements</td><td>Script submissions is incorrect and not as per requirements</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="schedule" class="card fade-in">
+            <h2>🗓️ Lecture Schedule</h2>
+            <div class="table-container">
+                 <table id="schedule-table">
+                    <thead>
+                        <tr><th>S.No</th><th>Schedule</th><th>Lecture Content</th><th>Material</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>01-Aug-25 (Friday)</td><td>Course Intro - Software Systems</td><td>[<a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/sai11101989/sai11101989.github.io/main/Course/SSD_Monsoon2025/SSD_Monsoon2025.pdf" target="_blank">Slides</a>][<a href="https://tinted-rumba-8c6.notion.site/Software-System-2456a6248bf68034bc14cfc44dc93062" target="_blank">Notes</a>]</td></tr>
+                        <tr><td>2</td><td>05-Aug-25 (Tuesday)</td><td>Relational Data</td><td>[<a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/sai11101989/sai11101989.github.io/main/Course/SSD_Monsoon2025/data.pdf" target="_blank">Slides</a>][<a href="https://tinted-rumba-8c6.notion.site/Structured-Databases-2456a6248bf6805f83e1cbf0a58761ec" target="_blank">Notes</a>]</td></tr>
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="lab" class="card fade-in">
+            <h2>🧪 Lab Schedule</h2>
+             <div class="table-container">
+                <table id="lab-table">
+                    <thead>
+                        <tr><th>Lab No.</th><th>Schedule</th><th>Topic</th><th>Notes</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>01</td><td>7-Aug-2025 (Friday)</td><td>Git Session</td><td>[<a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/sai11101989/sai11101989.github.io/main/Course/SSD_Monsoon2025/Labs/Lab01/SSD%20Tutorial%20%20-%20GIT.pdf" target="_blank">Slides</a>][<a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/sai11101989/sai11101989.github.io/main/Course/SSD_Monsoon2025/Labs/Lab01/SSD_GIT_LAB.pdf" target="_blank">Activity</a>]</td></tr>
+                        <tr><td>02</td><td>14-Aug-2025 (Thurday) @ 2PM-3PM</td><td>SQL Session</td><td>[<a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/sai11101989/sai11101989.github.io/main/Course/SSD_Monsoon2025/Labs/Lab01/Lab-2.pdf" target="_blank">Slides</a>][<a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/sai11101989/sai11101989.github.io/main/Course/SSD_Monsoon2025/Labs/Lab01/Activity%20-%20Lab%202.pdf" target="_blank">Activity</a>]</td></tr>
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="activity" class="card fade-in">
+            <h2>✍️ Exams & Assignments</h2>
+            <div class="table-container">
+                <table id="exams-table">
+                    <thead>
+                        <tr><th>S.No</th><th>Exam Type</th><th>Announcement</th><th>Submission Due</th><th>Material</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Assignment - SQL, NoSQL</td><td>15-Aug-2025</td><td>5-Sept-2025</td><td>[<a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/sai11101989/sai11101989.github.io/main/Course/SSD_Monsoon2025/Assignment_1.pdf" target="_blank">Paper</a>]</td></tr>
+                        <tr><td>2</td><td>Assignment - Web</td><td>6-Sept-2025</td><td>5-Oct-2025</td><td>[<a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/sai11101989/sai11101989.github.io/main/Course/SSD_Monsoon2025/Assignment_2.pdf" target="_blank">Paper</a>]</td></tr>
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="staff" class="card fade-in">
+            <h2>🧑‍🏫 Staff</h2>
+            <p><b>Instructors:</b> <a href="https://sites.google.com/view/abhishek-singh/home" target="_blank">Dr. Abhishek Singh</a>, <a href="https://sai11101989.github.io" target="_blank">Dr. Sai Anirudh Karre</a></p>
+            <p><b>Teaching Assistants:</b> Chirag Dhamija, Tejas Cavale, Divyansh Pandey, Aaditya Vardhan Narain, Kunal Kamalkishire Bhosikar, Chandrasekar S, Ashwani Raj, Hiya Bhatt</p>
+        </section>
+
+        <footer id="page-footer">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h4>Important Links</h4>
+                    <ul>
+                        <li><a href="https://intranet.iiit.ac.in/offices/static/files/Almanac_M25_Final-Ver2.1.pdf" target="_blank">Monsoon 2025 Almanac</a></li>
+                        <li><a href="https://intranet.iiit.ac.in/offices/static/files/Lecture%20timetable%20for%20Monsoon_2025_V1.2.pdf" target="_blank">Lecture Timetable</a></li>
+                        <li><a href="https://intranet.iiit.ac.in/offices/static/files/Tutorials%26LAB_Schedule_M25-V2.pdf" target="_blank">Lab Timetable</a></li>
+                        <li><a href="https://courses.iiit.ac.in/course/view.php?id=5324" target="_blank">Courses Portal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Current Time (IST)</h4>
+                    <div id="modern-clock"></div>
+                </div>
+                <div class="footer-column">
+                    <h4>Acknowledgements</h4>
+                    <p>Course Policy credits to <a href="https://faculty.iiit.ac.in/~raghu.reddy/Home.html" target="_blank">Dr. Raghu Reddy</a> & <a href="https://karthikvaidhyanathan.com/" target="_blank">Dr. Karthik Vaidhyanathan</a>.</p>
+                    <p><a href="https://serc.iiit.ac.in" target="_blank">Software Engineering Research Center</a><br><a href="https://iiit.ac.in" target="_blank">IIIT Hyderabad</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CS6.302 Software System Development | Hosted on GitHub.io</p>
+            </div>
+        </footer>
+
+    </div> <script>
+        // --- Live Clock ---
+        function startModernClock() {
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            h = checkTime(h);
+            m = checkTime(m);
+            s = checkTime(s);
+            const clockElement = document.getElementById('modern-clock');
+            if (clockElement) {
+                clockElement.innerHTML = h + ":" + m + ":" + s;
+            }
+            setTimeout(startModernClock, 1000);
+        }
+
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };
+            return i;
+        }
+
+        // --- All other interactive scripts run after the DOM is loaded ---
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // --- Theme Toggler (Light/Dark Mode) ---
+            const themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle) {
+                const currentTheme = localStorage.getItem('theme');
+                if (currentTheme === 'dark') {
+                    document.body.classList.add('dark-mode');
+                    themeToggle.checked = true;
+                }
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) {
+                        document.body.classList.add('dark-mode');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.body.classList.remove('dark-mode');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+
+            // --- Accordion Logic ---
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    header.classList.toggle('active');
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+
+            // --- On-Scroll Fade-In Animation ---
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            const elementsToAnimate = document.querySelectorAll('.fade-in');
+            elementsToAnimate.forEach((el) => observer.observe(el));
+
+            // --- Go to Top Button ---
+            const goToTopBtn = document.getElementById("goToTopBtn");
+            if (goToTopBtn) {
+                window.onscroll = function() {
+                    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                        goToTopBtn.style.display = "block";
+                    } else {
+                        goToTopBtn.style.display = "none";
+                    }
+                };
+            }
+        });
+    </script>
+</body>
+</html>
